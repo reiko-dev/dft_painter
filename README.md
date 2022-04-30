@@ -2,7 +2,7 @@
 The DFT_DRAWER is an app made with flutter which draws shapes from the user using the Discret Fourier Transform (DFT) algorithm.
 
 ## Inspiration
-Inspired by the videos about DFT drawing on the [The Coding Traing](https://www.youtube.com/c/TheCodingTrain) channel of our friend Daniel Shiffman!
+Inspired by the videos about DFT drawing on [The Coding Traing](https://www.youtube.com/c/TheCodingTrain) channel of our friend Daniel Shiffman!
 
 ## License
 
