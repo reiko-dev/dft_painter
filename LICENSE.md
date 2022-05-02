@@ -1,20 +1,11 @@
 
-### DFT_PAINTER
-
-The DFT_PAINTER is a Flutter App for painting user drawings using the Discret Fourier Transform (DFT) algorithm.
-
-## Inspiration
-
-<p align="justify">Inspired by the videos about DFT drawing on [The Coding Traing](https://www.youtube.com/c/TheCodingTrain) channel of our friend Daniel Shiffman!</p>
-
 ## License
 
-<p align="justify">The DFT_painter is released under the [MIT license](LICENSE.md). You can use the code for any purpose, including commercial projects.</p>
+<p align="justify">The DFT_painter is released under the MIT license. You can use the code for any purpose, including commercial projects.</p>
+
+#### MIT License 
 
 [![license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-
-#### MIT License
 
 Copyright (c) 2022 Vitor Lucas (Reiko)
 
