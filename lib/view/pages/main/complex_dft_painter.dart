@@ -149,10 +149,6 @@ class ComplexDFTPainter extends CustomPainter {
       xEpicyclePosition += radius * cos(freq * time + phase);
       yEpicyclePosition += radius * sin(freq * time + phase);
 
-      ///TODO: Use a DFTController to hold the data of the DFT painting part
-      ///Like: ellipsis colors, lines colors, (bool) withArrow on the lines from the center of the ellipsis, strokeWidth of the lines and
-      ///a custom shape to be drawn on the current point.
-      ///Draws the circles
       paint.strokeWidth = 2;
       canvas.drawCircle(Offset(prevX, prevY), radius, paint);
 

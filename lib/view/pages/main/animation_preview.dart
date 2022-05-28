@@ -91,8 +91,6 @@ class _AnimationPreviewState extends State<AnimationPreview> {
 
   @override
   Widget build(BuildContext context) {
-    print(MediaQuery.of(context).size.aspectRatio);
-    print(MediaQuery.of(context).size);
     return GestureDetector(
       onPanUpdate: onPanUpdate,
       onPanEnd: (_) => newList = true,

@@ -1,5 +1,5 @@
 import 'package:dft_drawer/domain/controllers/drawing_controller.dart';
-import 'package:dft_drawer/view/pages/main/my_color_picker.dart';
+import 'package:dft_drawer/view/pages/main/color_picker.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';

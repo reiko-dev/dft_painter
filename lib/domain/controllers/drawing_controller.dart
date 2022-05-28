@@ -130,9 +130,6 @@ class DrawingController extends GetxController {
     }
   }
 
-  //
-  //TODO: Add Web Isolate
-  //
   void _setFourierList(List<Fourier> newFourierList, AnimationState state) {
     _drawing.fourierList = newFourierList;
     _animationState = state;

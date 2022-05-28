@@ -68,7 +68,7 @@ class ToolsBar extends StatelessWidget {
           ),
           child: Scrollbar(
             controller: scrollController,
-            isAlwaysShown: true,
+            thumbVisibility: true,
             child: SingleChildScrollView(
               controller: scrollController,
               scrollDirection: Axis.horizontal,

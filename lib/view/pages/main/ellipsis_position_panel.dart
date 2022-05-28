@@ -17,7 +17,7 @@ class _EllipsisPositionPanelState extends State<EllipsisPositionPanel> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     center = MediaQuery.of(context).size.center(Offset.zero);
-    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       DrawingController.i.ellipsisCenter = center;
     });
   }
