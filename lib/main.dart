@@ -1,8 +1,6 @@
-import 'package:dft_drawer/dft/dft_page.dart';
 import 'package:dft_drawer/domain/controllers/drawing_controller.dart';
+import 'package:dft_drawer/view/pages/main/main_page.dart';
 import 'package:flutter/material.dart';
-
-import 'package:flutter/services.dart';
 
 import 'package:get/get.dart';
 
@@ -18,8 +16,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -37,7 +33,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: const DftPage(),
+      home: const MainPage(),
     );
   }
 }

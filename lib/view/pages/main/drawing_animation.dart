@@ -44,9 +44,10 @@ class _ComplexDFTUserDrawerState extends State<DrawingAnimation>
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<DrawingController>(
-      builder: (dc) {
-        if (dc.animationState == AnimationState.loading) {
+    return Obx(
+      () {
+        if (DrawingController.i.animationState.value ==
+            AnimationState.loading) {
           return const Center(child: CircularProgressIndicator());
         }
 
@@ -57,7 +58,7 @@ class _ComplexDFTUserDrawerState extends State<DrawingAnimation>
               children: [
                 CustomPaint(
                   painter: ComplexDFTPainter(
-                    drawing: dc,
+                    drawing: DrawingController.i,
                     style: AnimationStyle.loop,
                     startAnimation: startAnimation,
                   ),

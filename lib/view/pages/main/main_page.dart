@@ -35,11 +35,11 @@ class MainPage extends StatelessWidget {
               ),
               child: GetBuilder<DrawingController>(
                 builder: (_) {
-                  return _.animationState == AnimationState.notReady
+                  return _.animationState.value == AnimationState.notReady
                       ? const AnimationPreview()
                       : GestureDetector(
                           onTap: () {
-                            _.animationState = AnimationState.notReady;
+                            _.animationState.value = AnimationState.notReady;
                           },
                           child: const DrawingAnimation(),
                         );

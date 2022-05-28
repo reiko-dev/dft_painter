@@ -78,21 +78,35 @@ class ToolsBar extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 15.0),
-                      child: ElevatedButton(
-                        onPressed: () => showDrawingAnimation(_),
-                        child: const Text('Run DFT'),
-                      ),
+                      child: Obx(() {
+                        bool hasShape = DrawingController.i.hasShape();
+
+                        return ElevatedButton(
+                          onPressed:
+                              hasShape ? () => showDrawingAnimation(_) : null,
+                          child: const Text('Run DFT'),
+                        );
+                      }),
                     ),
                     SizedBox(width: 2.0.wp),
-                    ElevatedButton(
-                      onPressed: () {
-                        _.shapes = [];
-                        ComplexDFTPainter.clean();
-                        _.clearData();
-                      },
-                      child: const Text('Clear'),
-                      style: ElevatedButton.styleFrom(primary: Colors.red),
-                    ),
+                    Obx(() {
+                      final isLoading =
+                          DrawingController.i.animationState.value ==
+                              AnimationState.loading;
+                      bool hasShape = DrawingController.i.hasShape();
+
+                      return ElevatedButton(
+                        onPressed: !hasShape
+                            ? null
+                            : () {
+                                _.shapes = [];
+                                ComplexDFTPainter.clean();
+                                _.clearData();
+                              },
+                        child: Text(isLoading ? 'Cancel' : 'Clear'),
+                        style: ElevatedButton.styleFrom(primary: Colors.red),
+                      );
+                    }),
                     SizedBox(width: 2.0.wp),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,

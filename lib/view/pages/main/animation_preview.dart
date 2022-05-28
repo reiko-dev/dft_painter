@@ -1,5 +1,4 @@
 import 'package:dft_drawer/domain/controllers/drawing_controller.dart';
-import 'package:dft_drawer/utils/drawings.dart';
 import 'package:dft_drawer/view/models/shape_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class _AnimationPreviewState extends State<AnimationPreview> {
   void initState() {
     super.initState();
 
-    addDefaultDrawing(drawing);
+    // addDefaultDrawing(drawing);
   }
 
   ///This method can be used for adding drawings
@@ -104,7 +103,13 @@ class _AnimationPreviewState extends State<AnimationPreview> {
                   willChange: true,
                   isComplex: true,
                 )
-              : const SizedBox.shrink();
+              : const Center(
+                  child: Text(
+                    "Draw something with your mouse :)",
+                    maxLines: 2,
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  ),
+                );
         }),
       ),
     );
